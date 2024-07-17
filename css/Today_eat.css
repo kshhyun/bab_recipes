@@ -1,52 +1,92 @@
 @import url('//fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
-.search-section {
-    background-color: white;
+
+
+.container {
+    box-sizing: border-box;
+    min-width: 915px;
+    max-width: 915px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: white;
+    border: 3px solid #385F41;
+    border-radius: 41px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin : 0 auto;
+    margin-top: 100px;
 }
-.search-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
+.search-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 중앙 정렬 */
+    padding: 20px;
 }
-.search-section label {
+.search-section p{
+    font-family: 'NanumMyeongjo', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.9rem; /* 반응형 폰트 크기 */
+    line-height: 3rem;
+    color: #385F41;
+    margin-bottom : 30px;
+    margin-top : 15px;
+}
+
+
+.input-group {
     display: block;
+    flex-direction: column;
+    align-items: flex-start; /* 왼쪽 정렬 */
+    margin-bottom: 70px;
+    width: 100%; /* 전체 너비 */
+}
+
+.input-group label {
+    font-size: 1.25rem;
+    color: #385F41;
     margin-bottom: 10px;
-    font-size: 1em;
-    color: #333;
 }
-.search-section input[type="text"] {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
+
+.input-group input {
+    width: calc(80% - 20px); /* 여백을 고려하여 조정 */
+    padding: 20px 15px;
+    font-size: 1rem;
+    border: 1px solid #B2B2B2;
+    border-radius: 30px;
 }
+
+.input-group input:focus {
+    border-color: #385F41; /* 포커스 시 테두리 색 변경 */
+    outline: none; /* 기본 윤곽선 제거 */
+}
+
 .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 10px;
+    margin-bottom: 20px;
 }
+
 .tag {
-    background-color: #E0E0E0;
+    background: #F5F5F5;
+    border: 1px solid #B2B2B2;
+    border-radius: 20px;
     padding: 5px 10px;
-    border-radius: 15px;
     display: flex;
     align-items: center;
-    gap: 5px;
+    font-size: 1rem;
 }
-.tag .close {
+
+.close {
+    margin-left: 5px;
     cursor: pointer;
-    font-size: 1.2em;
+    color: #FF0000;
 }
+
 .search-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #D3D3D3;
+    padding: 10px 90px;
+    background: #385F41;
     border: none;
-    border-radius: 4px;
-    font-size: 1.2em;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    color: white;
     cursor: pointer;
 }
