@@ -1,0 +1,52 @@
+@import url('//fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
+.search-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.search-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.search-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #333;
+}
+.search-section input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.tag {
+    background-color: #E0E0E0;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.tag .close {
+    cursor: pointer;
+    font-size: 1.2em;
+}
+.search-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #D3D3D3;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
