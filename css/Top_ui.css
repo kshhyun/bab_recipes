@@ -1,5 +1,12 @@
 /* Top_ui.css */
+@import url('//fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
 
+@font-face {
+    font-family: 'BMYEONSUNG';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMYEONSUNG.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,6 +18,7 @@ body {
 .header-container {
     width: 100%;
     min-width: 1440px;
+    max-width: 1440px;
     margin-left : 129px;
     padding: 0 20px;
     display: flex;
@@ -26,11 +34,11 @@ body {
 }
 
 .logo p {
-    font-family: 'NanumMyeongjo', serif;
+    font-family: 'BMYEONSUNG', serif;
     font-style: normal;
     font-weight: 900;
     font-size: 1.7rem; /* 반응형 폰트 크기 */
-    line-height: 3rem;
+    line-height: 2rem;
     color: #385F41;
     margin : 0;
     margin-top : 17px;
@@ -41,7 +49,7 @@ body {
     width: 40px;
     height: 40px;
     right: 71px; /* 오른쪽 끝에서 71px 떨어지도록 */
-    top: 38px; /* 텍스트와 일직선상에 두기 위해 조정 */
+    top: 25px; /* 텍스트와 일직선상에 두기 위해 조정 */
     object-fit: cover;
 }
 
@@ -60,7 +68,7 @@ nav ul {
 }
 
 nav ul li a {
-    font-family: 'NanumMyeongjo', serif;
+    font-family: 'BMYEONSUNG', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1.1rem; /* 반응형 폰트 크기 */

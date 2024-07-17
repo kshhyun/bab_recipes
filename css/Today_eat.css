@@ -3,14 +3,14 @@
 
 .container {
     box-sizing: border-box;
-    min-width: 915px;
+    width: 100%;
     max-width: 915px;
     padding: 20px;
     background: white;
     border: 3px solid #385F41;
     border-radius: 41px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin : 0 auto;
+    margin: 0 auto;
     margin-top: 100px;
 }
 .search-section {
@@ -55,7 +55,7 @@
 
 .input-group input:focus {
     border-color: #385F41; /* 포커스 시 테두리 색 변경 */
-    outline: none; /* 기본 윤곽선 제거 */
+    outline: none; 
 }
 
 .tags {
@@ -66,8 +66,8 @@
 }
 
 .tag {
-    background: #F5F5F5;
-    border: 1px solid #B2B2B2;
+    /* background: #F5F5F5; */
+    /* border: 1px solid #B2B2B2; */
     border-radius: 20px;
     padding: 5px 10px;
     display: flex;
@@ -75,6 +75,19 @@
     font-size: 1rem;
 }
 
+.fridge-tags {
+    background-color: #89be95;
+    color: #000000; /* 다른 글씨 색상 */
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+
+}
+.exclude-tags {
+    background-color: rgb(255, 192, 192);
+    color: #000000; /* 다른 글씨 색상 */
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+}
 .close {
     margin-left: 5px;
     cursor: pointer;
@@ -89,4 +102,26 @@
     font-size: 1.25rem;
     color: white;
     cursor: pointer;
+}
+
+@media screen and (max-width: 915px) {
+    .container {
+        min-width: 100%;
+    }
+
+    .search-section p {
+        font-size: 1.5rem;
+    }
+
+    .input-group {
+        margin-bottom: 50px;
+    }
+
+    .input-group input {
+        width: calc(100% - 20px);
+    }
+
+    .search-button {
+        padding: 10px 50px;
+    }
 }
