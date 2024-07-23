@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밥 묵자</title>
+    <link rel="stylesheet" href="css/Top_ui.css">
+    <link rel="stylesheet" href="css/Today_eat_detail.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <p>밥 묵자</p>
+                <img src="images/rice_bowl.png" alt="밥 목자 로고">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li class="selected"><a href="#">레시피</a></li>
+                    <li><a href="#">스토어</a></li>
+                    <li><a href="#">오늘 뭐 먹지?</a></li>
+                </ul>
+            </nav>            
+        </div>
+        <hr class="divider">
+    </header>
+
+    <main>
+        <section class="filter-section">
+            <div class="filter-bar">
+                <label for="ingredient">냉장고 속 재료:</label>
+                <div id="ingredient" class="filter-item">감자</div>
+                <label for="avoid">이건 못 먹어요:</label>
+                <div id="avoid" class="filter-item">새우</div>
+            </div>
+            
+        </section>
+
+        <section class="recipe-section">
+            <h2>추천 레시피</h2>
+            <div class="recipe-list">
+                <div class="recipe-item">
+                    <img src="images/potato1.png" alt="감자채 볶음">
+                    <div class="recipe-details">
+                        <h3>감자채 볶음</h3>
+                        <p>말랑한 감자로 만든 감자채 볶음</p>
+                        <div class="ingredient-tags">
+                            <p class="ingredient-tag">감자</p>
+                            <p class="ingredient-tag">고구마</p>
+                        </div>
+                    </div>
+                    <div class="recipe-meta">
+                        <div class="bookmark">
+                            <img id="bookmark-icon" src="images/bookmark.png" alt="북마크 아이콘" onclick="toggleBookmark()">
+                        </div>
+                        <p class="rating">★ 9.99 / 10</p>
+                    </div>
+                </div>
+                <div class="recipe-item">
+                    <img src="images/potato2.png" alt="감자전">
+                    <div class="recipe-details">
+                        <h3>감자전</h3>
+                        <p>말랑한 감자로 만든 감자전</p>
+                        <div class="ingredient-tags">
+                            <p class="ingredient-tag">감자</p>
+                            <p class="ingredient-tag">고구마</p>
+                        </div>
+                    </div>
+                    <div class="recipe-meta">
+                        <div class="bookmark">
+                            <img id="bookmark-icon" src="images/bookmark.png" alt="북마크 아이콘" onclick="toggleBookmark()">
+                        </div>
+                        <p class="rating">★ 9.99 / 10</p>
+                    </div>
+                </div>
+                <!-- 아래 지워도 됌 -->
+                <div class="recipe-item">
+                    <img src="images/potato2.png" alt="감자전">
+                    <div class="recipe-details">
+                        <h3>감자전</h3>
+                        <p>말랑한 감자로 만든 감자전</p>
+                        <div class="ingredient-tags">
+                            <p class="ingredient-tag">감자</p>
+                            <p class="ingredient-tag">고구마</p>
+                        </div>
+                    </div>
+                    <div class="recipe-meta">
+                        <div class="bookmark">
+                            <img id="bookmark-icon" src="images/bookmark.png" alt="북마크 아이콘" onclick="toggleBookmark()">
+                        </div>
+                        <p class="rating">★ 9.99 / 10</p>
+                    </div>
+                </div>
+
+                <div class="recipe-item">
+                    <img src="images/potato2.png" alt="감자전">
+                    <div class="recipe-details">
+                        <h3>감자전</h3>
+                        <p>말랑한 감자로 만든 감자전</p>
+                        <div class="ingredient-tags">
+                            <p class="ingredient-tag">감자</p>
+                            <p class="ingredient-tag">고구마</p>
+                        </div>
+                    </div>
+                    <div class="recipe-meta">
+                        <div class="bookmark">
+                            <img id="bookmark-icon" src="images/bookmark.png" alt="북마크 아이콘" onclick="toggleBookmark()">
+                        </div>
+                        <p class="rating">★ 9.99 / 10</p>
+                    </div>
+                </div>
+
+            </div>
+            
+        </section>
+    </main>
+
+    <script src="js/Top_ui.js"></script>
+    <script src="js/today_eat_detail.js"></script>
+</body>
+</html>

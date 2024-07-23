@@ -1,14 +1,5 @@
-/* Top_ui.css */
-@import url('//fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
-
-@font-face {
-    font-family: 'BMYEONSUNG';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMYEONSUNG.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'GowunDodum-Regular';
     margin: 0;
     padding: 0;
     background: #FFFFFF;
@@ -16,10 +7,8 @@ body {
 }
 
 .header-container {
-    width: 100%;
-    min-width: 1440px;
     max-width: 1440px;
-    margin-left : 129px;
+    width: 100%;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -30,11 +19,12 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+    margin-left : 129px;
     /* margin-bottom: 3px; 아래 요소와 간격 조정 */
 }
 
 .logo p {
-    font-family: 'BMYEONSUNG', serif;
+    font-family: 'GowunDodum-Regular';
     font-style: normal;
     font-weight: 900;
     font-size: 1.7rem; /* 반응형 폰트 크기 */
@@ -52,7 +42,9 @@ body {
     top: 25px; /* 텍스트와 일직선상에 두기 위해 조정 */
     object-fit: cover;
 }
-
+.menu{
+    margin-left : 129px;
+}
 nav {
     margin-top: 10px;
     /* margin-left : 15px; */
@@ -68,7 +60,7 @@ nav ul {
 }
 
 nav ul li a {
-    font-family: 'BMYEONSUNG', serif;
+    font-family: 'GowunDodum-Regular';
     font-style: normal;
     font-weight: 700;
     font-size: 1.1rem; /* 반응형 폰트 크기 */
@@ -94,16 +86,9 @@ nav ul li a {
     border-bottom: 3px solid transparent;
     padding-bottom: 11px; /* 밑줄과 텍스트 사이의 간격 조절 */
 }
-
-
-
-
-
 .divider {
     width: 100%;
     border: 1px solid #B2B2B2;
-    margin-top: 0.2rem;
+    margin-top: 0.35rem;
     box-sizing: border-box;
 }
-
-
