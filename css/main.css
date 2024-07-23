@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'GowunDodum-Regular';
+    min-width: 1440px;
+    background: #FFFFFF;
+}
+
+.search {
+    padding: 20px 50px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFFFFF;
+}
+
+.search-bar input {
+    font-family: 'GowunDodum-Regular';
+    width: 300px;
+    height: 45px;
+    border: 1px solid rgba(56, 95, 65, 0.51);
+    border-radius: 28px;
+    outline: none;
+    padding: 0 20px;
+    font-size: 16px;
+}
+
+.search h1 {
+    font-size: 35px;
+}
+
+.popular {
+    margin: auto;
+}
+
+.popular h2 {
+    font-size: 25px;
+    margin-left: 420px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* 정렬 버튼 */
+.week-month {
+    font-family: 'GowunDodum-Regular';
+    display: inline-block;
+    float: right;
+    margin-right: 420px;
+    margin-top: 20px;
+    font-size: 16px;
+    vertical-align: middle;
+
+    appearance: none; /* 기본 브라우저 스타일 제거 */
+    -webkit-appearance: none; /* 사파리 기본 스타일 제거 */
+    -moz-appearance: none; /* 파이어폭스 기본 스타일 제거 */
+    background-color: #ffffff;
+    border: 2px solid #385F41;
+    border-radius: 10px;
+    color: #142618;
+    padding: 6px 25px;
+    cursor: pointer;
+    text-align: center;
+    text-align-last: center; 
+}
+
+.week-month option {
+    background-color: #FFFFFF;
+    color: #142618;
+    font-family: 'NanumMyeongjo', serif;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.week-month option[selected] {
+    background-color: #ffffff; /* 선택된 옵션 배경색 */
+}
+
+/* 인기레시피 */
+.recipes-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.carousel-button {
+    font-size: 30px;
+    font-weight: 700;
+    color: #142618;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.recipes {
+    display: flex;
+    gap: 20px; /* Adjust the gap between images as needed */
+}
+
+.recipe {
+    width: 300px; /* Reduced width */
+    text-align: center; /* Center the text below each image */
+}
+
+.recipe img {
+    width: 100%;
+    height: 300px; /* Reduced height */
+    object-fit: cover;
+}
+
+.recipe-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #142618;
+    margin: 10px 0;
+}
+
+.today {
+    font-family: 'GowunDodum-Regular';
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.today_eat {
+    float: right;
+    margin-right: 420px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* nav-bar ----------------------------- */
+.nav {
+    margin-left: 420px;
+    margin-bottom: 30px;
+}
+
+.nav-item {
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+}
+
+.nav-item.active {
+    font-size: 25px;
+    color: #142618;
+    /* font-weight: bold; */
+}
+
+.content {
+    text-align: center;
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
