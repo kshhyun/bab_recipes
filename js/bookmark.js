@@ -18,3 +18,23 @@ document.querySelectorAll('.sort-option').forEach(option => {
         // sortRecipes(this.id); // 예: sort-high 또는 sort-low에 따라 정렬
     });
 });
+
+
+document.querySelectorAll('.sort-option').forEach(option => {
+    option.addEventListener('click', function() {
+        document.querySelectorAll('.sort-option').forEach(opt => opt.classList.remove('active'));
+        this.classList.add('active');
+        
+        // 정렬 기능 추가 가능
+    });
+});
+
+document.querySelectorAll('.category').forEach(category => {
+    category.addEventListener('click', function() {
+        document.querySelectorAll('.category').forEach(cat => cat.classList.remove('active'));
+        this.classList.add('active');
+        
+        // 카테고리 변경 기능 추가 가능
+    });
+});
+

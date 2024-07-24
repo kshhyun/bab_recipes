@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>밥 묵자</title>
     <link rel="stylesheet" href="css/Top_ui.css">
-    <link rel="stylesheet" href="css/Today_eat_detail.css">
+    <link rel="stylesheet" href="css/bookmark.css">
 </head>
 <body>
     <header>
@@ -26,22 +26,25 @@
     </header>
 
     <main>
-        <section class="filter-section">
-            <div class="filter-bar">
-                <label for="ingredient">냉장고 속 재료:</label>
-                <div id="ingredient" class="filter-item">감자</div>
-                <label for="avoid">이건 못 먹어요:</label>
-                <div id="avoid" class="filter-item">새우</div>
-            </div>
-        </section>
+
         <section class="recipe-section">
             <div class="recipe-header">
-                <h2>추천 레시피</h2>
+                <h2>북마크</h2>
                 <div class="sort-options">
                     <span class="sort-option active" id="sort-high">별점 높은 순</span>
                     <span class="sort-option" id="sort-low">별점 낮은 순</span>
                 </div>
             </div>
+
+            <div class="filter-bar">
+                <span class="category active">한식</span>
+                <span class="category">양식</span>
+                <span class="category">일식</span>
+                <span class="category">중식</span>
+                <span class="category">아시안</span>
+                <span class="category">치킨~~~</span>
+            </div>
+
             <div class="recipe-list">
                 <div class="recipe-item">
                     <img src="images/potato1.png" alt="감자채 볶음">
@@ -81,8 +84,7 @@
         </section>
     </main>
     
-
     <script src="js/Top_ui.js"></script>
-    <script src="js/today_eat_detail.js"></script>
+    <script src="js/bookmark.js"></script>
 </body>
 </html>

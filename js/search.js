@@ -18,3 +18,18 @@ document.querySelectorAll('.sort-option').forEach(option => {
         // sortRecipes(this.id); // 예: sort-high 또는 sort-low에 따라 정렬
     });
 });
+
+
+function searchRecipes() {
+    const query = document.getElementById('search').value.toLowerCase();
+    const recipes = document.querySelectorAll('.recipe-item');
+    
+    recipes.forEach(recipe => {
+        const title = recipe.querySelector('h3').innerText.toLowerCase();
+        if (title.includes(query)) {
+            recipe.style.display = 'block';
+        } else {
+            recipe.style.display = 'none';
+        }
+    });
+}
