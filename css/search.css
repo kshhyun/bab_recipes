@@ -149,8 +149,8 @@ main {
 }
 
 .ingredient-tag {
-    background-color: #e0f7fa;
-    color: #00796b;
+    background-color: #ebebeb;
+    color: #000000; /*#142618*/
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 0.9em;
