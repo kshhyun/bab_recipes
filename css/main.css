@@ -11,11 +11,15 @@ body {
     background: #FFFFFF;
 }
 
+.banner img{
+    width: 100%;
+}
+
 .search {
-    padding: 20px 50px;
+    padding: 10px 40px 20px 40px;
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    /* margin-top: 60px; */
+    margin-bottom: 60px;
 }
 
 .search-bar {
@@ -34,7 +38,7 @@ body {
     font-family: 'GowunDodum-Regular';
     width: 300px;
     height: 45px;
-    border: 1px solid rgba(56, 95, 65, 0.51);
+    border: 2px solid rgba(56, 95, 65, 0.51);
     border-radius: 28px;
     outline: none;
     padding: 0 20px;
@@ -43,52 +47,6 @@ body {
 
 .search h1 {
     font-size: 35px;
-}
-
-.popular {
-    margin: auto;
-}
-
-.popular h2 {
-    font-size: 25px;
-    margin-left: 420px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-/* 정렬 버튼 */
-.week-month {
-    font-family: 'GowunDodum-Regular';
-    display: inline-block;
-    float: right;
-    margin-right: 420px;
-    margin-top: 20px;
-    font-size: 16px;
-    vertical-align: middle;
-
-    appearance: none; /* 기본 브라우저 스타일 제거 */
-    -webkit-appearance: none; /* 사파리 기본 스타일 제거 */
-    -moz-appearance: none; /* 파이어폭스 기본 스타일 제거 */
-    background-color: #ffffff;
-    border: 2px solid #385F41;
-    border-radius: 10px;
-    color: #142618;
-    padding: 6px 25px;
-    cursor: pointer;
-    text-align: center;
-    text-align-last: center; 
-}
-
-.week-month option {
-    background-color: #FFFFFF;
-    color: #142618;
-    font-family: 'NanumMyeongjo', serif;
-    font-size: 20px;
-    padding: 10px;
-}
-
-.week-month option[selected] {
-    background-color: #ffffff; /* 선택된 옵션 배경색 */
 }
 
 /* 인기레시피 */
@@ -111,17 +69,22 @@ body {
 
 .recipes {
     display: flex;
-    gap: 20px; /* Adjust the gap between images as needed */
+    gap: 20px;
 }
 
 .recipe {
-    width: 300px; /* Reduced width */
-    text-align: center; /* Center the text below each image */
+    width: 300px;
+    text-align: center;
+}
+
+.recipe img {
+    width: 120px;
+    height: 120px;
 }
 
 .recipe img {
     width: 100%;
-    height: 300px; /* Reduced height */
+    height: 300px;
     object-fit: cover;
 }
 
@@ -129,16 +92,36 @@ body {
     font-size: 20px;
     font-weight: 700;
     color: #142618;
-    margin: 10px 0;
+    margin: 10px 0px 15px 0px;
 }
 
-.today {
-    font-family: 'GowunDodum-Regular';
+/* 재료 */
+.ingredient-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.ingredient-tag {
+    background-color: #ebebeb;
+    color: #000000; /*#142618*/
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    display: inline-block;
+    white-space: nowrap;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+/* .today {
     margin-top: 40px;
     margin-bottom: 100px;
 }
 
 .today_eat {
+    font-family: 'GowunDodum-Regular';
     float: right;
     margin-right: 420px;
     background: none;
@@ -147,12 +130,12 @@ body {
     font-size: 18px;
     color: inherit;
     cursor: pointer;
-}
+} */
 
 /* nav-bar ----------------------------- */
 .nav {
-    margin-left: 420px;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 70px;
 }
 
 .nav-item {
@@ -169,10 +152,29 @@ body {
 
 .content {
     text-align: center;
-    display: none;
 }
 
-.content.active {
-    display: block;
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3칸 그리드 설정 */
+    gap: 20px; /* 이미지 사이의 간격 */
+    width: max-content; /* 콘텐츠 너비에 맞추기 */
+    margin: 0 auto; /* 중앙에 배치 */
 }
 
+.recipe {
+    text-align: center;
+}
+
+.content {
+    justify-content: center; /* category 중앙 배치 */
+}
+
+.nav-bar {
+    text-align: center; /* nav-bar를 중앙에 배치 */
+    margin-bottom: 50px; /* 하단 여백 */
+}
+
+.nav {
+    display: inline-block; /* 중앙에 배치 */
+}
