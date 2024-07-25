@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인기 레시피</title>
+    <link rel="stylesheet" href="css/Top_ui.css">
+    <link rel="stylesheet" href="css/popular.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <p>밥 묵자</p>
+                <img src="images/rice_bowl.png" alt="밥 목자 로고">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li class="selected"><a href="#">레시피</a></li>
+                    <li><a href="#">스토어</a></li>
+                    <li><a href="#">오늘 뭐 먹지?</a></li>
+                </ul>
+            </nav>            
+        </div>
+        <hr class="divider">
+    </header>
+
+    <div class="popular">
+        <h2>인기 레시피</h2>
+            <select class="week-month">
+                <option value="week">이번주</option>
+                <option value="month">이번달</option>
+            </select>
+        
+        <div class="recipes-carousel">
+            <button class="carousel-button">&lt;</button>
+            <div class="recipes">
+                <div class="recipe">
+                    <img src="/images/food89.png" alt="양지수육전골">
+                    <div class="recipe-title">양지수육전골</div>
+                </div>
+                <div class="recipe">
+                    <img src="/images/food86.png" alt="고깃집 된장찌개">
+                    <div class="recipe-title">고깃집 된장찌개</div>
+                </div>
+                <div class="recipe">
+                    <img src="/images/food87.png" alt="허니포테이토 그라탕">
+                    <div class="recipe-title">허니포테이토 그라탕</div>
+                </div>
+            </div>
+            <button class="carousel-button">&gt;</button>
+        </div>
+
+
+    <script src="js/popular.js"></script>
+    <script src="js/Top_ui.js"></script>
+</body>
+</html>
