@@ -100,5 +100,6 @@ nav ul li a {
     width: 100%;
     border: 1px solid #B2B2B2;
     margin-top: 0.3rem;
+    margin-bottom: 0px;
     box-sizing: border-box;
 }
