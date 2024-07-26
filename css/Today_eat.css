@@ -1,6 +1,9 @@
-@import url('//fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
-
-
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 .container {
     box-sizing: border-box;
     width: 100%;
@@ -20,7 +23,7 @@
     padding: 20px;
 }
 .search-section p{
-    font-family: 'NanumMyeongjo', serif;
+    font-family: 'GowunDodum-Regular';
     font-style: normal;
     font-weight: 900;
     font-size: 1.9rem; /* 반응형 폰트 크기 */
