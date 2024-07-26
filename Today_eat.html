@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밥 묵자</title>
+    <link rel="stylesheet" href="css/Today_eat.css">
+    <link rel="stylesheet" href="css/Top_ui.css">
+</head>
+<body>
+<!-- 고정 UI -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <p>밥 묵자</p>
+                <img src="images/rice_bowl.png" alt="밥 목자 로고">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#">레시피</a></li>
+                    <li><a href="#">스토어</a></li>
+                    <li class="selected"><a href="#">오늘 뭐 먹지?</a></li>
+                </ul>
+            </nav>            
+        </div>
+        <hr class="divider">
+    </header>
+
+
+    <div class="container">
+        <div class="search-section">
+            <p>오늘 뭐 먹지?</p>
+            <div class="input-group">
+                <label for="fridge-items">냉장고 속 재료</label>
+                <input type="text" id="fridge-items" placeholder="재료를 입력해주세요">
+            </div>
+            <div class="input-group">
+                <label for="exclude-items">이건 못 먹어요</label>
+                <input type="text" id="exclude-items" placeholder="재료를 입력해주세요">
+            </div>
+            <!-- 태그들이 추가될 컨테이너 -->
+            <div class="tags fridge-tags">
+                <!-- 냉장고 속 재료 태그들이 추가될 위치 -->
+            </div>
+            <div class="tags exclude-tags">
+                <!-- 못 먹는 재료 태그들이 추가될 위치 -->
+            </div>
+            <button class="search-button">검색</button>
+        </div>
+    </div>
+    <script src="js/Today.js"></script>
+    <script src="js/Top_ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밥 묵자</title>
+    <link rel="stylesheet" href="css/Top_ui.css">
+    <link rel="stylesheet" href="css/bookmark.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <p>밥 묵자</p>
+                <img src="images/rice_bowl.png" alt="밥 목자 로고">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li class="selected"><a href="#">레시피</a></li>
+                    <li><a href="#">스토어</a></li>
+                    <li><a href="#">오늘 뭐 먹지?</a></li>
+                </ul>
+            </nav>            
+        </div>
+        <hr class="divider">
+    </header>
+
+    <main>
+
+        <section class="recipe-section">
+            <div class="recipe-header">
+                <h2>북마크</h2>
+                <div class="sort-options">
+                    <span class="sort-option active" id="sort-high">별점 높은 순</span>
+                    <span class="sort-option" id="sort-low">별점 낮은 순</span>
+                </div>
+            </div>
+
+            <div class="filter-bar">
+                <span class="category active">한식</span>
+                <span class="category">양식</span>
+                <span class="category">일식</span>
+                <span class="category">중식</span>
+                <span class="category">아시안</span>
+                <span class="category">치킨~~~</span>
+            </div>
+
+            <div class="recipe-list">
+                <div class="recipe-item">
+                    <img src="images/potato1.png" alt="감자채 볶음">
+                    <div class="recipe-details">
+                        <h3>감자채 볶음</h3>
+                        <p>말랑한 감자로 만든 감자채 볶음</p>
+                        <div class="ingredient-tags">
+                            <p class="ingredient-tag">감자</p>
+                            <p class="ingredient-tag">고구마</p>
+                        </div>
+                    </div>
+                    <div class="recipe-meta">
+                        <div class="bookmark">
+                            <img class="bookmark-icon" src="images/bookmark.png" alt="북마크 아이콘">
+                        </div>
+                        <p class="rating">★ 9.99 / 10</p>
+                    </div>
+                </div>
+                <div class="recipe-item">
+                    <img src="images/potato2.png" alt="감자전">
+                    <div class="recipe-details">
+                        <h3>감자전</h3>
+                        <p>말랑한 감자로 만든 감자전</p>
+                        <div class="ingredient-tags">
+                            <p class="ingredient-tag">감자</p>
+                            <p class="ingredient-tag">고구마</p>
+                        </div>
+                    </div>
+                    <div class="recipe-meta">
+                        <div class="bookmark">
+                            <img class="bookmark-icon" src="images/bookmark.png" alt="북마크 아이콘">
+                        </div>
+                        <p class="rating">★ 9.99 / 10</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="js/Top_ui.js"></script>
+    <script src="js/bookmark.js"></script>
+</body>
+</html>
