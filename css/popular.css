@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .popular {
     margin: auto;
 }
@@ -9,59 +16,104 @@
     vertical-align: middle;
 }
 
+
+
 /* 정렬 버튼 */
-.week-month {
-    font-family: 'GowunDodum-Regular';
-    display: inline-block;
-    float: right;
-    margin-right: 420px;
-    margin-top: 20px;
-    font-size: 16px;
-    vertical-align: middle;
-
-    appearance: none; /* 기본 브라우저 스타일 제거 */
-    -webkit-appearance: none; 
-    -moz-appearance: none;
-    background-color: #385F41;
-    border: 2px solid #385F41;
-    border-radius: 10px;
-    color: #ffffff;
-    padding: 6px 25px;
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+button {
     cursor: pointer;
+    border: none;
+}
+
+.week-month {
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+/* 셀렉트 박스 */
+.btn-select {
+    font-size: 16px;
+    width: 20rem;
+    height: 4rem;
+    border-radius: 10px;
+    background: #385F41;
     text-align: center;
-    text-align-last: center; 
+    padding: 0 1em;
+    position: relative;
+    color: white;
 }
 
-.week-month option {
-    background-color: #FFFFFF;
-    color: #385F41;
-    font-family: 'GowunDodum-Regular';
-    font-size: 20px;
-    padding: 10px;
-    text-align: center;
-}
-
-/* 선택된 옵션 스타일 */
-.week-month option[selected] {
-    font-family: 'GowunDodum-Regular';
-    background-color: #ffffff; /* 선택된 옵션 배경색 */
-    border: 2px solid #385F41;
-}
-
-/* 리스트 항목에 마우스 hover 시 배경색 변경 및 텍스트 정중앙 배치 */
-.week-month option:hover {
-    background-color: #CBDFCF;
-    text-align: center;
-}
-
-/* select 클릭 시 border 제거 */
-.week-month:focus {
+.btn-select.on,
+.btn-select:focus {
     outline: none;
-    border: 2px solid #385F41; /* focus 시 border 유지 */
+    /* border-color: #9fbba5; */
+    /* box-shadow: 0 0 0 3px #fff9e7; */
 }
 
-.week-month:focus-visible {
-    outline: none; /* focus 시 outline 제거 */
+/* 화살표 모양 */
+.btn-select::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    margin-top: -0.5rem;
+    box-sizing: border-box;
+    border-top: 0.8rem solid #ffffff;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    transition: transform 0.3s;
+}
+
+/* 활성화 시 화살표 회전 */
+    .btn-select.on::after {
+    transform: rotate(-180deg);
+}
+
+/* 리스트 */
+.list {
+    position: absolute;
+    top: 4.8rem;
+    left: 0;
+    z-index: 1;
+    width: 20rem;
+    border: 1px solid #c4c4c4;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+
+    /* 변동값 */
+    display: none;
+}
+
+.btn-select.on + .list {
+    display: block;
+}
+
+
+.list li {
+    padding: 0.5rem 0.8rem;
+}
+.list button {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 0.8rem;
+    height: 4rem;
+    background: #fff;
+    transition: background-color 0.3s;
+}
+.list li button:hover,
+.list li button:focus {
+    background-color: #c7ddcc; 
+    /* 언어에 마우스 올려놓을때 연한주황배경       */
+}
+.list li button:focus {
+    outline: 2px solid #9fbba5;
+        /* 포커스(누르고있을때) 테두리   */
 }
 
 
