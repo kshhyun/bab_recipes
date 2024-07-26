@@ -79,18 +79,29 @@
 }
 
 .fridge-tags {
+    color: #000000; /* 다른 글씨 색상 */
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+
+}
+
+.fridge-tags .tag {
     background-color: #89be95;
     color: #000000; /* 다른 글씨 색상 */
     border-radius: 20px;
     border: 1px solid #ffffff;
 
 }
-.exclude-tags {
+
+
+.exclude-tags .tag {
     background-color: rgb(255, 192, 192);
     color: #000000; /* 다른 글씨 색상 */
     border-radius: 20px;
     border: 1px solid #ffffff;
+
 }
+
 .close {
     margin-left: 5px;
     cursor: pointer;
