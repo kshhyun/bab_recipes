@@ -9,9 +9,9 @@
 <body>
     <header>
         <div class="header-container">
-            <div class="logo">
+            <div class="logo" id="logo">
                 <p>밥 묵자</p>
-                <img src="images/rice_bowl.png" alt="밥 목자 로고">
+                <img src="images/rice_bowl.png" alt="밥 묵자 로고" id="logo-img">
             </div>
             <nav>
                 <ul class="menu">
@@ -22,9 +22,18 @@
             </nav>            
         </div>
         <hr class="divider">
+        <div id="dropdown-content" class="dropdown-content">
+            <p id="user-email">bab@naver.com</p>
+            <hr>
+            <a href="#" class="edit-info">정보 수정</a>
+            <div class="dropdown-buttons">
+                <div class="combined-buttons">
+                    <a href="#" class="bookmark-btn"><img src="/images/bookmark.png" alt="책갈피 아이콘"> 책갈피</a>
+                    <a href="#" class="logout-btn"><img src="/images/Log out.png" alt="로그아웃 아이콘"> 로그아웃</a>
+                </div>
+            </div>
+        </div>
     </header>
     <script src="js/Top_ui.js"></script>
 </body>
 </html>
-
-
