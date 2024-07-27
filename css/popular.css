@@ -6,39 +6,58 @@
 }
 
 .popular {
-    margin: auto;
+    font-family: 'GowunDodum-Regular';
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    min-width: 1100px;
 }
 
-.popular h2 {
+.pop_list {
+    position: relative;
+}
+
+.title {
+    width: 50%;
+    float: left;
+}
+
+.title h2 {
     font-size: 25px;
-    margin-left: 420px;
+    text-align: left;
     display: inline-block;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 }
-
-
 
 /* 정렬 버튼 */
+.week-month {
+    font-family: 'GowunDodum-Regular';
+    width: 50%;
+    float: right;
+    position: relative;
+    padding-bottom: 0.8rem;
+    text-align: right; /* 오른쪽 정렬을 위해 추가 */
+}
+
 ul, li {
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 button {
     cursor: pointer;
     border: none;
-}
-
-.week-month {
-    position: relative;
-    padding-bottom: 0.8rem;
+    height: 50px;
 }
 
 /* 셀렉트 박스 */
 .btn-select {
-    font-size: 16px;
-    width: 20rem;
-    height: 4rem;
+    font-family: 'GowunDodum-Regular';
+    display: inline-block; /* 인라인 블록으로 변경 */
+    font-size: 1rem;
+    width: 150px;
+    height: 50px;
     border-radius: 10px;
     background: #385F41;
     text-align: center;
@@ -69,55 +88,52 @@ button {
 }
 
 /* 활성화 시 화살표 회전 */
-    .btn-select.on::after {
+.btn-select.on::after {
     transform: rotate(-180deg);
 }
 
 /* 리스트 */
 .list {
+    font-family: 'GowunDodum-Regular';
+    display: none; /* 기본적으로 숨김 */
     position: absolute;
-    top: 4.8rem;
-    left: 0;
+    top: 100%; /* 버튼 바로 아래에 위치 */
+    right: 0; /* 오른쪽에 정렬 */
     z-index: 1;
-    width: 20rem;
+    width: 150px;
     border: 1px solid #c4c4c4;
     border-radius: 1rem;
     background: #fff;
     box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
-
-    /* 변동값 */
-    display: none;
 }
 
 .btn-select.on + .list {
     display: block;
 }
 
-
 .list li {
-    padding: 0.5rem 0.8rem;
+    padding: 0.4rem 0.3rem;
 }
+
 .list button {
+    font-family: 'GowunDodum-Regular';
+    font-size: 1rem;
     width: 100%;
-    height: 100%;
+    height: 4rem;
     text-align: center;
     border-radius: 0.8rem;
-    height: 4rem;
     background: #fff;
     transition: background-color 0.3s;
 }
+
 .list li button:hover,
 .list li button:focus {
     background-color: #c7ddcc; 
-    /* 언어에 마우스 올려놓을때 연한주황배경       */
 }
+
 .list li button:focus {
     outline: 2px solid #9fbba5;
-        /* 포커스(누르고있을때) 테두리   */
 }
-
-
-
 
 /* 인기레시피 */
 .recipes-carousel {
@@ -169,5 +185,68 @@ button {
     text-align: center;
 }
 
+/* 인기 레시피 리스트 */
+.all {
+    font-family: 'GowunDodum-Regular';
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    min-width: 1100px;
+}
 
+.product_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3칸 그리드 설정 */
+    gap: 20px; /* 이미지 사이의 간격 */
+    width: max-content; /* 콘텐츠 너비에 맞추기 */
+    margin: 0 auto; /* 중앙에 배치 */
+    padding-top: 50px;
+}
 
+.recipes {
+    display: flex;
+    gap: 20px;
+}
+
+.recipe {
+    width: 300px;
+    text-align: center;
+}
+
+.recipe img {
+    width: 120px;
+    height: 120px;
+}
+
+.recipe img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.recipe-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #142618;
+    margin: 10px 0px 15px 0px;
+}
+
+/* 재료 */
+.ingredient-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.ingredient-tag {
+    background-color: #ebebeb;
+    color: #000000; /*#142618*/
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    display: inline-block;
+    white-space: nowrap;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
