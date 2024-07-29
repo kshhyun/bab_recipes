@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class TodayController {
 
+    /*
+    Today - today_eat / eat_detail
+     */
     @GetMapping("/Today")
     public String Today_eat(){
         return "/Today_eat";

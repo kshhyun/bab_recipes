@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MainController {
 
+    /*
+    Main - bookmark / Search
+     */
+
+
     @GetMapping("/")
     public String index() {
         return "/login";

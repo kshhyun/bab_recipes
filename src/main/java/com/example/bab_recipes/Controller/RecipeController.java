@@ -6,6 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class RecipeController {
 
+    /*
+    Recipe - main / popular / Recipes_detail
+     */
+
     @GetMapping("/main")
     public String recipe(){
         return "/main";

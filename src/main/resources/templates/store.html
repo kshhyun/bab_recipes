@@ -11,9 +11,10 @@
     <header>
         <div class="header-container">
             <div class="logo" id="logo">
-                <p>밥 묵자<a th:href="@{/main}"></a></p>
-                <img th:src="@{/images/rice_bowl.png}" alt="밥 묵자 로고" id="logo-img">
-
+                <a href="/main" class="no-underline">
+                    <p>밥 묵자</p>
+                </a>
+                <img th:src="@{/images/rice_bowl.png}" alt="밥 묵자 로고">
             </div>
             <nav>
                 <ul class="menu">
