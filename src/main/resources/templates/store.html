@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>밥 묵자 - 스토어</title>
-    <link rel="stylesheet" href="css/Top_ui.css">
-    <link rel="stylesheet" href="css/store.css">
+    <link rel="stylesheet" th:href="@{/css/Top_ui.css}">
+    <link rel="stylesheet" th:href="@{/css/store.css}">
 </head>
 <body>
     <header>
         <div class="header-container">
-            <div class="logo">
-                <p>밥 묵자</p>
-                <img src="images/rice_bowl.png" alt="밥 묵자 로고">
+            <div class="logo" id="logo">
+                <p>밥 묵자<a th:href="@{/main}"></a></p>
+                <img th:src="@{/images/rice_bowl.png}" alt="밥 묵자 로고" id="logo-img">
+
             </div>
             <nav>
                 <ul class="menu">
-                    <li><a href="#">레시피</a></li>
-                    <li class="selected"><a href="store.html">스토어</a></li>
-                    <li><a href="#">오늘 뭐 먹지?</a></li>
+                    <li><a th:href="@{/main}">레시피</a></li>
+                    <li class="selected"><a th:href="@{/store}">스토어</a></li>
+                    <li><a th:href="@{/Today}">오늘 뭐 먹지?</a></li>
                 </ul>
-            </nav>            
+            </nav>
         </div>
         <hr class="divider">
         <div id="dropdown-content" class="dropdown-content">
@@ -29,8 +30,8 @@
             <a href="#" class="edit-info">정보 수정</a>
             <div class="dropdown-buttons">
                 <div class="combined-buttons">
-                    <a href="#" class="bookmark-btn"><img src="/images/bookmark.png" alt="책갈피 아이콘"> 책갈피</a>
-                    <a href="#" class="logout-btn"><img src="/images/Log out.png" alt="로그아웃 아이콘"> 로그아웃</a>
+                    <a th:href="@{/bookmark}" class="bookmark-btn"><img th:src="@{/images/bookmark_n.png}" alt="책갈피 아이콘"> 책갈피</a>
+                    <a th:href="@{/logout}" class="logout-btn"><img th:src="@{/images/Logout.png}" alt="로그아웃 아이콘"> 로그아웃</a>
                 </div>
             </div>
         </div>
@@ -56,7 +57,7 @@
             <div class="product-grid">
                 <a href="https://www.coupang.com/np/search?component=&q=밀푀유나베" class="product" target="_blank">
                     <div class="product-img">
-                        <img src="images/Rectangle 40.png" alt="밀푀유나베">
+                        <img src="../../../../images/Rectangle%2040.png" alt="밀푀유나베">
                     </div>
                     <p class="product-name">밀푀유나베</p>
                     <p class="price">24,000원</p>
@@ -64,7 +65,7 @@
                 </a>
                 <a href="https://www.coupang.com/np/search?component=&q=천지양+맛간장+백목이버섯" class="product" target="_blank">
                     <div class="product-img">
-                        <img src="images/Rectangle 41.png" alt="천지양 맛간장 백목이버섯">
+                        <img src="../../../../images/Rectangle%2041.png" alt="천지양 맛간장 백목이버섯">
                     </div>
                     <p class="product-name">천지양 맛간장 백목이버섯</p>
                     <p class="price">24,000원</p>
@@ -72,7 +73,7 @@
                 </a>
                 <a href="https://search.shopping.naver.com/search/all?query=단짠고추장+우삼겹+덮밥" class="product" target="_blank">
                     <div class="product-img">
-                        <img src="images/Rectangle 42.png" alt="단짠고추장 우삼겹 덮밥">
+                        <img src="../../../../images/Rectangle%2042.png" alt="단짠고추장 우삼겹 덮밥">
                     </div>
                     <p class="product-name">단짠고추장 우삼겹 덮밥</p>
                     <p class="price">24,000원</p>
@@ -80,7 +81,7 @@
                 </a>
                 <a href="https://search.shopping.naver.com/search/all?query=직화요리+생오소고기" class="product" target="_blank">
                     <div class="product-img">
-                        <img src="images/Rectangle 43.png" alt="직화요리 생오소고기">
+                        <img src="../../../../images/Rectangle%2043.png" alt="직화요리 생오소고기">
                     </div>
                     <p class="product-name">직화요리 생오소고기</p>
                     <p class="price">24,000원</p>
@@ -88,7 +89,7 @@
                 </a>
                 <a href="https://www.coupang.com/np/search?component=&q=마라탕" class="product" target="_blank">
                     <div class="product-img">
-                        <img src="images/Rectangle 44.png" alt="마라탕">
+                        <img src="../../../../images/Rectangle%2044.png" alt="마라탕">
                     </div>
                     <p class="product-name">마라탕</p>
                     <p class="price">24,000원</p>
@@ -96,7 +97,7 @@
                 </a>
                 <a href="https://www.coupang.com/np/search?component=&q=꼬리찜" class="product" target="_blank">
                     <div class="product-img">
-                        <img src="images/Rectangle 45.png" alt="꼬리찜">
+                        <img src="../../../../images/Rectangle%2045.png" alt="꼬리찜">
                     </div>
                     <p class="product-name">꼬리찜</p>
                     <p class="price">24,000원</p>
@@ -104,7 +105,7 @@
                 </a>
                 <a href="https://www.coupang.com/np/search?component=&q=돼지갈비" class="product" target="_blank">
                     <div class="product-img">
-                        <img src="images/Rectangle 46.png" alt="돼지갈비">
+                        <img src="../../../../images/Rectangle%2046.png" alt="돼지갈비">
                     </div>
                     <p class="product-name">돼지갈비</p>
                     <p class="price">24,000원</p>
@@ -112,7 +113,7 @@
                 </a>
                 <a href="https://www.coupang.com/np/search?component=&q=밀푀유나베" class="product" target="_blank">
                     <div class="product-img">
-                        <img src="images/Rectangle 47.png" alt="밀푀유나베">
+                        <img src="../../../../images/Rectangle%2047.png" alt="밀푀유나베">
                     </div>
                     <p class="product-name">밀푀유나베</p>
                     <p class="price">24,000원</p>
@@ -120,7 +121,7 @@
                 </a>
                 <a href="https://www.coupang.com/np/search?component=&q=해물탕" class="product" target="_blank">
                     <div class="product-img">
-                        <img src="images/Rectangle 48.png" alt="해물탕">
+                        <img src="../../../../images/Rectangle%2048.png" alt="해물탕">
                     </div>
                     <p class="product-name">해물탕</p>
                     <p class="price">24,000원</p>
@@ -128,7 +129,7 @@
                 </a>
                 <a href="https://www.coupang.com/np/search?component=&q=고등어" class="product" target="_blank">
                     <div class="product-img">
-                        <img src="images/Rectangle 49.png" alt="고등어">
+                        <img src="../../../../images/Rectangle%2049.png" alt="고등어">
                     </div>
                     <p class="product-name">고등어</p>
                     <p class="price">24,000원</p>
@@ -136,7 +137,7 @@
                 </a>
                 <a href="https://www.coupang.com/np/search?component=&q=밀푀유나베" class="product" target="_blank">
                     <div class="product-img">
-                        <img src="images/Rectangle 50.png" alt="밀푀유나베">
+                        <img src="../../../../images/Rectangle%2050.png" alt="밀푀유나베">
                     </div>
                     <p class="product-name">밀푀유나베</p>
                     <p class="price">24,000원</p>
@@ -144,7 +145,7 @@
                 </a>
                 <a href="https://www.coupang.com/np/search?component=&q=냉우동" class="product" target="_blank">
                     <div class="product-img">
-                        <img src="images/Rectangle 51.png" alt="냉우동">
+                        <img src="../../../../images/Rectangle%2051.png" alt="냉우동">
                     </div>
                     <p class="product-name">냉우동</p>
                     <p class="price">24,000원</p>
@@ -153,7 +154,7 @@
             </div>
         </section>
     </main>
-    <script src="js/store.js"></script>
-    <script src="js/Top_ui.js"></script>
+    <script src="../../../../js/store.js"></script>
+    <script src="../../../../js/Top_ui.js"></script>
 </body>
 </html>

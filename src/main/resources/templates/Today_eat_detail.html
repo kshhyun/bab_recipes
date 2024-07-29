@@ -1,28 +1,39 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>밥 묵자</title>
-    <link rel="stylesheet" href="css/Top_ui.css">
-    <link rel="stylesheet" href="css/Today_eat_detail.css">
+    <link rel="stylesheet" th:href="@{/css/Top_ui.css}">
+    <link rel="stylesheet" th:href="@{/css/Today_eat_detail.css}">
 </head>
 <body>
     <header>
         <div class="header-container">
-            <div class="logo">
+            <div class="logo" id="logo">
                 <p>밥 묵자</p>
-                <img src="images/rice_bowl.png" alt="밥 목자 로고">
+                <img th:src="@{/images/rice_bowl.png}" alt="밥 묵자 로고" id="logo-img">
             </div>
             <nav>
                 <ul class="menu">
-                    <li class="selected"><a href="#">레시피</a></li>
-                    <li><a href="#">스토어</a></li>
-                    <li><a href="#">오늘 뭐 먹지?</a></li>
+                    <li><a th:href="@{/main}">레시피</a></li>
+                    <li><a th:href="@{/store}">스토어</a></li>
+                    <li><a th:href="@{/Today}">오늘 뭐 먹지?</a></li>
                 </ul>
-            </nav>            
+            </nav>
         </div>
         <hr class="divider">
+        <div id="dropdown-content" class="dropdown-content">
+            <p id="user-email">bab@naver.com</p>
+            <hr>
+            <a href="#" class="edit-info">정보 수정</a>
+            <div class="dropdown-buttons">
+                <div class="combined-buttons">
+                    <a th:href="@{/bookmark}" class="bookmark-btn"><img th:src="@{/images/bookmark_n.png}" alt="책갈피 아이콘"> 책갈피</a>
+                    <a th:href="@{/logout}" class="logout-btn"><img th:src="@{/images/Logout.png}" alt="로그아웃 아이콘"> 로그아웃</a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -44,7 +55,7 @@
             </div>
             <div class="recipe-list">
                 <div class="recipe-item">
-                    <img src="images/potato1.png" alt="감자채 볶음">
+                    <img src="/images/potato1.png" alt="감자채 볶음">
                     <div class="recipe-details">
                         <h3>감자채 볶음</h3>
                         <p>말랑한 감자로 만든 감자채 볶음</p>
@@ -55,13 +66,13 @@
                     </div>
                     <div class="recipe-meta">
                         <div class="bookmark">
-                            <img class="bookmark-icon" src="images/bookmark.png" alt="북마크 아이콘">
+                            <img class="bookmark-icon" src="/images/bookmark.png" alt="북마크 아이콘">
                         </div>
                         <p class="rating">★ 9.99 / 10</p>
                     </div>
                 </div>
                 <div class="recipe-item">
-                    <img src="images/potato2.png" alt="감자전">
+                    <img src="/images/potato2.png" alt="감자전">
                     <div class="recipe-details">
                         <h3>감자전</h3>
                         <p>말랑한 감자로 만든 감자전</p>
@@ -72,7 +83,7 @@
                     </div>
                     <div class="recipe-meta">
                         <div class="bookmark">
-                            <img class="bookmark-icon" src="images/bookmark.png" alt="북마크 아이콘">
+                            <img class="bookmark-icon" src="/images/bookmark.png" alt="북마크 아이콘">
                         </div>
                         <p class="rating">★ 9.99 / 10</p>
                     </div>
@@ -82,7 +93,7 @@
     </main>
     
 
-    <script src="js/Top_ui.js"></script>
-    <script src="js/today_eat_detail.js"></script>
+    <script th:src="@{/js/Top_ui.js}"></script>
+    <script th:src="@{/js/today_eat_detail.js}"></script>
 </body>
 </html>

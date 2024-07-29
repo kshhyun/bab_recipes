@@ -13,10 +13,10 @@ function toggleDetails(id) {
     
     if (content.style.display === "none" || content.style.display === "") {
         content.style.display = "block";
-        icon.src = 'images/Chevron up.png';
+        icon.src = 'images/Chevronup.png';
     } else {
         content.style.display = "none";
-        icon.src = 'images/Chevron down.png';
+        icon.src = 'images/Chevrondown.png';
     }
 }
 
