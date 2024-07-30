@@ -11,10 +11,10 @@ public class User {
     @Column(name = "userId")
     private Long userId;
 
-    @Column(name = "userEmail")
+    @Column(name = "userEmail", nullable = false, length = 100)
     private String userEmail;
 
-    @Column(name = "userName")
+    @Column(name = "userName", nullable = false, length = 100)
     private String userName;
 
     public String getUserEmail() {
@@ -31,5 +31,8 @@ public class User {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+    public Long getUserId() {
+        return userId;
     }
 }
