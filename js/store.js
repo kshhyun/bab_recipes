@@ -23,4 +23,30 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+
+    // 커스텀 드롭다운 메뉴 JavaScript
+    const btnSelect = document.querySelector('.btn-select');
+    const list = document.querySelector('.list');
+    const buttons = document.querySelectorAll('.list li button');
+
+    btnSelect.addEventListener('click', (event) => {
+        event.stopPropagation();
+        btnSelect.classList.toggle('on');
+        list.style.display = list.style.display === 'block' ? 'none' : 'block';
+    });
+
+    buttons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.stopPropagation();
+            btnSelect.textContent = button.textContent;
+            btnSelect.classList.remove('on');
+            list.style.display = 'none';
+        });
+    });
+
+    // 드롭다운 외부를 클릭했을 때 닫기
+    document.addEventListener('click', () => {
+        btnSelect.classList.remove('on');
+        list.style.display = 'none';
+    });
 });
