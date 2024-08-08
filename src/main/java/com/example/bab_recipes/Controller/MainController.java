@@ -22,4 +22,5 @@ public class MainController {
     public String bookmark() {
         return "/bookmark";
     }
+
 }

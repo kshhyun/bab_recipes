@@ -35,4 +35,13 @@ public class User {
     public Long getUserId() {
         return userId;
     }
+
+    public static User setUserId(Long userId, String userName, String userEmail) {
+        User user = new User();
+        user.userId = userId;
+        user.userName = userName;
+        user.userEmail = userEmail;
+        return user;
+
+    }
 }
